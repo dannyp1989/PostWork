@@ -80,12 +80,7 @@ public class Main1 {
 		System.out.println("====Women between 20 and 35 years old, slary greater than 3500 - 5% raise====");
 
 		employeeList.stream()
-		.filter(src -> {
-			if ( src.getSex() == 'k' && src.getAge()<35 && src.getAge()>20 && src.getSalary()>3500) {
-				return true;
-			}
-			return  false;
-		})
+		.filter(src -> ( src.getSex() == 'k' && src.getAge()<35 && src.getAge()>20 && src.getSalary()>3500))
 		.map(src -> {src.setSalary(src.getSalary()*1.05); return src;})
 		.forEach(System.out::println);
 

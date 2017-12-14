@@ -11,10 +11,7 @@ import java.util.function.Predicate;
 public class Main1 {
 
 	public static <V> boolean checkValue(V value, FilterCheck<V> f) {
-		if ( f.check(value)) {
-			return true;
-		}
-		return false;
+		return f.check(value);
 	}
 
 
@@ -65,12 +62,7 @@ public class Main1 {
 		List<Integer> values = Arrays.asList(1,99,100,101, -213);
 
 		values.stream()
-		.filter(src -> Main1.checkValue(src, sr -> {
-			if ( sr < 101 && sr >= 0) {
-				return true;
-			}
-			return false;
-		}))
+		.filter(src -> Main1.checkValue(src, sr -> ( sr < 101 && sr >= 0)))
 		.forEach(System.out::println);
 
 
