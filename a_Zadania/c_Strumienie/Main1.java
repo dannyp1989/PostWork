@@ -83,7 +83,8 @@ public class Main1 {
 		.filter(src -> ( src.getSex() == 'k' && src.getAge()<35 && src.getAge()>20 && src.getSalary()>3500))
 		.map(src -> {src.setSalary(src.getSalary()*1.05); return src;})
 		.forEach(System.out::println);
-
+		System.out.println("To samo");
+		employeeList.forEach(System.out::println);
 
 		System.out.println("=========");
 
