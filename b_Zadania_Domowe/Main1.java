@@ -53,7 +53,9 @@ public class Main1 {
 	}
 
 	static <T> void consumeCollection(Collection<T> collection, Consumer<T> consumer) {
-		
+		for (T s: collection) {
+			consumer.accept(s);
+		}
 	}
 
 
@@ -118,7 +120,7 @@ public class Main1 {
 		
 		System.out.println("===========consumeCollection=============");
 		
-		
+		Main1.consumeCollection(list, src -> System.out.println(src));
 
 	}
 	
