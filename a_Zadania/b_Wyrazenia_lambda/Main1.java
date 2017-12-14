@@ -46,8 +46,36 @@ public class Main1 {
 		return getInteger(p, msg);
 	}
 	
-	public static void main (String[] arg) {
-		Main1.getList();
+	public static Double getSquare(MathInt<Double> p, Double a) {
+		return p.math(a);
 	}
+	public static Double getFactorial(MathInt<Integer> p, Integer a) {
+		return p.math(a);
+	}
+	
+
+    public static Double factorial(int N)
+    {
+        Double multi = 1D;
+        for (int i = 1; i <= N; i++) {
+            multi = multi * i;
+        }
+        return multi;
+    }
+	
+	public static void main (String[] arg) {
+//		Main1.getList();
+		
+		System.out.println("Power of 2.13 is : " + Main1.getSquare(src -> (src * 2), 2.13));
+		System.out.println("Square of 2.13 is : " + Main1.getSquare(src -> (Math.sqrt(src)), 2.13));
+		System.out.println("Factorial of 5 is : " + Main1.getFactorial(src -> (factorial(src)), 5));
+	
+	}
+	
+	
+	
+	
+	
+	
 	
 }
